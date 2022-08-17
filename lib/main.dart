@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Question 1'),
+              const Text('Question '),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Answer 1'),
@@ -43,8 +43,11 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text('Question 1'),
-              ElevatedButton(onPressed: () {}, child: const Text('Answer 1'))
+              ElevatedButton(onPressed: () {}, child: const Text('Answer 1')),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Answer 1')),
             ],
           ),
         ),
