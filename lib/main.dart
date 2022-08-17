@@ -21,13 +21,17 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
-  void answerChosen (){
-    print("Correct");
 
+  void answerChosen() {
+    print("Correct");
   }
 
   @override
   Widget build(BuildContext context) {
+    var questions = [
+      "What's your favorite food?",
+      "What's your favorite color?"
+    ];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Quiz App'),
@@ -39,19 +43,25 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Question '),
+              Text(
+                questions.elementAt(0),
+              ),
               ElevatedButton(
                 onPressed: answerChosen,
-                child: const Text('Answer 1'),
+                child: Text(
+                  questions.elementAt(1),
+                ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(onPressed: answerChosen, child: const Text('Answer 1')),
+              ElevatedButton(
+                  onPressed: answerChosen, child: const Text('Answer 1')),
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(onPressed: answerChosen, child: const Text('Answer 1')),
+              ElevatedButton(
+                  onPressed: answerChosen, child: const Text('Answer 1')),
             ],
           ),
         ),
