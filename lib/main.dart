@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
+  void answerChosen (){
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,17 +40,17 @@ class HomePage extends StatelessWidget {
             children: [
               const Text('Question '),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: answerChosen,
                 child: const Text('Answer 1'),
               ),
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text('Answer 1')),
+              ElevatedButton(onPressed: answerChosen, child: const Text('Answer 1')),
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text('Answer 1')),
+              ElevatedButton(onPressed: answerChosen, child: const Text('Answer 1')),
             ],
           ),
         ),
