@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Quiz App'),),
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(20.0),
