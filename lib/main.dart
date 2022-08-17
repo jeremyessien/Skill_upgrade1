@@ -20,18 +20,18 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-   const HomePage({Key? key}) : super(key: key);
+   const HomePage({Key? key}z) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
   void answerChosen() {
    setState(() {
-     questionIndex = questionIndex + 1;
+     _questionIndex = _questionIndex + 1;
    });
   }
 
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                questions[questionIndex],
+                questions[_questionIndex],
               ),
               ElevatedButton(
                 onPressed: answerChosen,
