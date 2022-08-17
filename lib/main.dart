@@ -48,8 +48,8 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: answerChosen,
-                child: Text(
-                  questions.elementAt(1),
+                child: const Text(
+                  'Answer 1'
                 ),
               ),
               const SizedBox(
