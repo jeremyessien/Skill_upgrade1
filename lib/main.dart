@@ -14,16 +14,25 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home:  const HomePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var questionIndex = 0;
 
   void answerChosen() {
-    print("Correct");
+   setState(() {
+     questionIndex = questionIndex + 1;
+   });
   }
 
   @override
@@ -44,7 +53,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                questions.elementAt(0),
+                questions[questionIndex],
               ),
               ElevatedButton(
                 onPressed: answerChosen,
