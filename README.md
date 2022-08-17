@@ -1,7 +1,6 @@
 # skill_upgrade1
 
-A new Flutter project.
-
+A quiz app 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
