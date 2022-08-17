@@ -31,6 +31,9 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ElevatedButton(onPressed: (){}, child: const Text('Answer 1'),),
+              const SizedBox(height: 20,),
+              ElevatedButton(onPressed: (){}, child: const Text('Answer 1'))
+
             ],
           ),
         ),
