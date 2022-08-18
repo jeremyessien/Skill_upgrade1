@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skill_upgrade1/question.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  const HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-   const HomePage({Key? key}z) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -30,9 +31,9 @@ class _HomePageState extends State<HomePage> {
   var _questionIndex = 0;
 
   void answerChosen() {
-   setState(() {
-     _questionIndex = _questionIndex + 1;
-   });
+    setState(() {
+      _questionIndex = _questionIndex + 1;
+    });
   }
 
   @override
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              Questions(
                 questions[_questionIndex],
               ),
               ElevatedButton(
